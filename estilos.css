@@ -1,0 +1,165 @@
+*{
+    color: white;
+}
+body{
+	font-family: arial, helvetica;
+	background: #e8e8e8;
+    background-image: url(./media/1366_2000.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+nav{
+    background: #48055c;
+    height: 80px;
+    width: 100%;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    height: 40px;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+nav ul li{
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #fff;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+li a.active, li a:hover{
+    background: #8a8aaf;
+    transition: .5s;
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+main{
+	background-color: #48055c;
+    color: white;
+}
+article{
+	background-color: #48055c;
+	color: white;
+	border: 2px solid white;
+}
+.contacto-email{
+    padding: 20px;
+    color: white;
+}
+.call{
+    width: 50%;
+    color: #fff;
+    border: 2px solid #000;
+    background-color: rgba(51, 51, 51, 0.5);
+    padding: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin:20px;
+}
+#cons{
+	color: rgb(0, 0, 0);
+	text-align: center;
+	padding: 50px;
+	background-color: rgba(128, 128, 128, 0.678);
+}
+.call a{
+    background-color:#48055c;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    text-transform: capitalize;
+    border-radius: 7px;
+    border: 2px solid #333;
+}
+.call a:hover{
+    background-color: #333;
+    transition: all 0.8s;
+    border: 2px solid #48055c;
+}
+.container-button{
+	background-color:#ffffff;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    text-transform: capitalize;
+    border-radius: 7px;
+    border: 2px solid #333;
+	text-decoration: none;
+}
+.container-button:hover{
+    background-color: #333;
+    transition: all 0.8s;
+    border: 2px solid #48055c;
+}
+footer{
+    background-color: #000;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+footer i{
+    letter-spacing: 20px;
+    font-size: 40px;
+    color: #48055c;
+    margin-top: 20px;
+}
+@media (max-width: 952px){
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: flex;
+    }
+    nav{
+        padding: 0 30px;
+    }
+    ul{
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        flex-direction: column;
+        z-index: 10;
+    }
+    nav ul li{
+        margin: 20px 0;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        //background: #000090;
+        //color: red;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+}

@@ -1,0 +1,164 @@
+*{
+    color: white;
+}
+body{
+	font-family: arial, helvetica;
+	background: #e8e8e8;
+    background-image: url(./media/1366_2000.jpeg);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    letter-spacing: 0.03em;
+    line-height: 1.6;
+}
+nav{
+    background: #48055c;
+    height: 80px;
+    width: 100%;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    height: 40px;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+nav ul li{
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #fff;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+li a.active, li a:hover{
+    background: #8a8aaf;
+    transition: .5s;
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+main{
+	background-color: #18055c;
+    color: white;
+}
+article{
+	background-color: #48055c;
+	color: white;
+	border: 2px solid white;
+}
+.title{
+    text-align: center;
+    font-size: 40px;
+    color: #ffffff;
+    margin-top: 100px;
+    font-weight: 50;
+    background-color: rgba(128, 128, 128, 0.445);
+}
+.card p{
+    color: black;
+}
+.container h4{
+    color: black;
+}
+.container{
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+.container .card{
+    width: 330px;
+    height: 430px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    transition: all 0.25s;
+}
+.container .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+.container .card img{
+    width: 300x;
+    height: 200px;
+    border-radius: 10px;
+}
+.card{
+    display: flex;
+    justify-content: space-around;
+}
+footer{
+    background-color: #000;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+footer i{
+    letter-spacing: 20px;
+    font-size: 40px;
+    color: #48055c;
+    margin-top: 20px;
+}
+
+@media (max-width: 952px){
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: flex;
+    }
+    nav{
+        padding: 0 30px;
+    }
+    ul{
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        flex-direction: column;
+        z-index: 10;
+    }
+    nav ul li{
+        margin: 20px 0;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        //background: #000090;
+        //color: red;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+}
